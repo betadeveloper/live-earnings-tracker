@@ -43,7 +43,7 @@ const AffordCalculator: React.FC = () => {
     };
 
     return (
-        <div className="bg-white rounded-lg p-4 shadow-sm max-w-md mx-auto">
+        <div className="bg-white rounded-lg p-4 shadow-sm w-full max-w-[min(100%,640px)] mx-auto">
             <div className="flex items-center mb-4">
                 <CalculatorIcon className="text-green-600 mr-2" size={24} />
                 <h2 className="text-lg font-semibold">Time to Afford Calculator</h2>
@@ -78,7 +78,7 @@ const AffordCalculator: React.FC = () => {
                 />
                 <div className="relative w-full sm:w-auto">
                     <select
-                        className="appearance-none border border-gray-300 rounded px-3 py-2 w-full sm:w-auto"
+                        className="appearance-none border border-gray-300 rounded px-3 py-2 pr-8 w-full sm:w-auto"
                         value={newItem.category}
                         onChange={(e) =>
                             setNewItem({
@@ -93,7 +93,7 @@ const AffordCalculator: React.FC = () => {
                         <option>Home</option>
                         <option>Other</option>
                     </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                    <div className="absolute inset-y-0 right-2 flex items-center pointer-events-none">
                         <svg
                             className="w-4 h-4 text-gray-400"
                             fill="none"
@@ -126,9 +126,9 @@ const AffordCalculator: React.FC = () => {
                         <div className="flex justify-between items-center">
                             <div>
                                 <h3 className="font-medium">{item.name}</h3>
-                                        <p className="text-gray-500">
-                                            {currency.match(/\((.*?)\)/)?.[1]} {item.price}
-                                        </p>
+                                <p className="text-gray-500">
+                                    {currency.match(/\((.*?)\)/)?.[1]} {item.price}
+                                </p>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <div className="flex items-center text-blue-600">
