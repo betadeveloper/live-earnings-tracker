@@ -4,9 +4,11 @@ import EarningsBreakdown from './components/EarningsBreakdown';
 import WorkSchedule from './components/WorkSchedule';
 import AffordCalculator from './components/AffordCalculator';
 import { SalaryProvider } from './contexts/SalaryContext';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const AppContent = () => {
   return <SalaryProvider>
+    <SpeedInsights />
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <Header />
