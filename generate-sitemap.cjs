@@ -6,7 +6,7 @@ const links = [
 ];
 
 (async () => {
-    const stream = new SitemapStream({ hostname: 'https://yourdomain.com' });
+    const stream = new SitemapStream({ hostname: 'https://earningstracker.vercel.app' });
     const writeStream = createWriteStream('./public/sitemap.xml');
 
     stream.pipe(writeStream);
