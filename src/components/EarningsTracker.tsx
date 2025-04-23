@@ -127,7 +127,7 @@ const EarningsTracker: React.FC = () => {
   return (
     <>
       <style>{liveFlashingStyle}</style>
-      <div className='bg-gradient-to-tr from-blue-700 via-blue-600 to-indigo-800 text-white rounded-lg p-4 sm:p-6 w-full mx-auto'>
+      <div className='bg-gradient-to-tr from-blue-800 via-blue-700 to-indigo-900 text-white rounded-lg p-4 sm:p-6 w-full mx-auto'>
         <div className='flex flex-wrap justify-between items-center mb-4'>
           <div className='flex items-center mb-2 sm:mb-0'>
             <DollarSignIcon className='mr-2' size={20} aria-hidden='true' />
@@ -148,6 +148,7 @@ const EarningsTracker: React.FC = () => {
               role='tab'
               aria-selected={currentView === 'day'}
               aria-controls='day-view'
+              aria-label="View today's earnings"
             >
               <ClockIcon size={16} className='mr-1' aria-hidden='true' />
               Today
@@ -160,6 +161,7 @@ const EarningsTracker: React.FC = () => {
               role='tab'
               aria-selected={currentView === 'month'}
               aria-controls='month-view'
+              aria-label='View monthly earnings'
             >
               <CalendarIcon size={16} className='mr-1' aria-hidden='true' />
               Month
@@ -172,6 +174,7 @@ const EarningsTracker: React.FC = () => {
               role='tab'
               aria-selected={currentView === 'year'}
               aria-controls='year-view'
+              aria-label='View yearly earnings'
             >
               <BarChartIcon size={16} className='mr-1' aria-hidden='true' />
               Year
@@ -224,6 +227,7 @@ const EarningsTracker: React.FC = () => {
               aria-valuenow={workProgress}
               aria-valuemin={0}
               aria-valuemax={100}
+              aria-label='Work progress'
             >
               <div
                 className='h-full bg-blue-400 transition-all duration-500'
